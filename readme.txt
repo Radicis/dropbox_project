@@ -3,7 +3,7 @@ Assignment 3
 Google App Engine
 Dropbox Project
 
-Adam lloyd - R00117318
+Adam lloyd
 
 alloydbox.appspot.com
 
