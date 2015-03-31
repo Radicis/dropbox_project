@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>AlloydBox</title>
+	<link type="text/css" rel="stylesheet" href="static/style/main.css" />
+</head>
+
+<body>
+<div id="wrapper">
+<header>
+	<div class="user">
+		Logged in as:<span><strong> {{ user }}</strong></span>
+		<a href={{ logout_url }} >Logout</a>
+	</div>
+
+	<div class="logo"><h2>Alloyd<span>Box</span></h2></div>
+</header>
+<div id="main-wrapper" class="clear-fix">
+<div id="side-menu">
+
+<ul>
+	<a href="/"><li>My Files</li></a>
+	<a href="/about"><li>About</li></a>
+	<a href="{{ logout_url }}"><li>Logout</li></a>
+</ul>
+
+</div>	
+<div id="main-container">		
+	<h2>About this project</h2>
+	<p>
+	This web application was created as an assignment for the Cloud Computing with Python module in <a href="http://www.cit.ie">CIT</a>.
+	</p>
+	<p>
+	The brief was to create a Dropbox-like application using the Google App Engine framework to deploy a cloud based web application with which users can log in, upload files which are then displayed and can be downloaded or deleted at will.
+	</p>
+	<p>
+		Cloud Computing With Python 
+		Assignment 3
+		Google App Engine
+		Dropbox Project
+		Adam Lloyd
+	</p>
+	<p><strong>How to use the application: </strong></p>
+<ol>
+<li>Log in to the applicaiton using Google openID</li>
+<li>On the main page the files uploaded by the logged in user are displayed</li>
+<li>To upload a file, click on the browse button below, locate the file you wish to upload and click the upload button</li>
+<li>To delete or download a file you have uploaded, check the checkbox beside the file (only 1 at a time or an error is generated) and then click the relevant button Delete/Download.</li>
+</ol>
+	
+	<p>It demonstrates the following features:</p>
+	<ul>
+		<li><strong>User login using Google's users service which lets the application integrate with Google user accounts.</strong><em> With the Users service, your users can use the Google accounts they already have to sign in to the application.</em></li>
+		<li><strong>Persistent data storage on the GAE datastore.</strong> <em>The Datastore holds data objects known as entities. An entity has one or more properties, named values of one of several supported data types: for instance, a property can be a string, an integer, or a reference to another entity. Each entity is identified by its kind, which categorizes the entity for the purpose of queries, and a key that uniquely identifies it within its kind.</em></li>
+		<li><strong>Use of the GAE templating system.</strong> <em>HTML embedded in code is messy and difficult to maintain. It's better to use a templating system, where the HTML is kept in a separate file with special syntax to indicate where the data from the application appears. There are many templating systems for Python: EZT, Cheetah, ClearSilver, Quixote, Django, and Jinja2 are just a few. You can use your template engine of choice by bundling it with your application code.</em></li>
+
+	</ul>
+
+</div><!-- End main container -->
+</div><!-- End main wrapper -->
+	<p class="copy">Adam Lloyd 2014</p>
+</div> <!-- End wrapper -->
+</body>
+
+</html>

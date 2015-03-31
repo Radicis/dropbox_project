@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>AlloydBox</title>
+	<link type="text/css" rel="stylesheet" href="static/style/main.css" />	
+</head>
+
+<body>
+<div id="wrapper">
+<header>
+<div class="user">
+	Logged in as:<span><strong> {{ user }}</strong></span>
+	<a href={{ logout_url }} >Logout</a>
+</div>
+
+<div class="logo"><h2>Alloyd<span>Box</span></h2></div>
+</header>
+<div id="main-wrapper" class="clear-fix">
+<div id="side-menu">
+
+<ul>
+<a href="/"><li>My Files</li></a>
+<a href="/about"><li>About</li></a>
+<a href="{{ logout_url }}"><li>Logout</li></a>
+</ul>
+
+</div>	
+<div id="main-container">		
+<form name="fileForm" id="file-form" action="/download" method="POST" enctype="multipart/form-data"><!-- Begin File display/download form -->
+<table id="file-box">
+<tr>
+	<th>Thumbnail</th>
+	<th>Name</th>
+	<th>Type</th>
+	<th>Size</th>
+	<th>Uploaded</th>
+	<th>Download/Delete</th>
+</tr>
+
+
+
